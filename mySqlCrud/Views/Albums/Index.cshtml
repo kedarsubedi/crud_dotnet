@@ -1,0 +1,30 @@
+﻿@model IEnumerable<mySqlCrud.Models.Album> 
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Artist Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <th scope="row">@Html.DisplayTextFor(modelitem => item.Id)</th>
+            <th scope="row">@Html.DisplayTextFor(modelitem => item.Name)</th>
+            <td>@Html.DisplayTextFor(modelitem => item.ArtistName)</td>
+            <td>@Html.DisplayTextFor(modelitem => item.Price)</td>
+            <td>@Html.DisplayTextFor(modelitem => item.Genre)</td>
+        </tr>
+        }
+
+
+    </tbody>
+</table>
